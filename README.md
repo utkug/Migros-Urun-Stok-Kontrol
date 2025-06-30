@@ -8,12 +8,15 @@ npm install
 
 # Kullanım
 await checkStockForStores("Şehir İsmi", "İlçe")
-await checkStockForStores("Şehir Plaka Kodu", "İlçe")
+await checkStockForStores(Şehir Plaka Kodu, "İlçe")
 await checkStockForStores("Şehir İsmi")
-await checkStockForStores("Şehir Plaka Kodu")
+await checkStockForStores(Şehir Plaka Kodu)
 
 # Örnek
 await checkProductsInStores("Ankara","Çankaya")
+await checkProductsInStores(6,"Çankaya")
+await checkProductsInStores("Ankara")
+await checkProductsInStores(6)
 ```
 ### Ürün URL'si
 
