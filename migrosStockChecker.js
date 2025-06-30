@@ -2,7 +2,7 @@ import puppeteer from "puppeteer"
 
 const BASE_URL = "https://www.migros.com.tr"
 const POST_URL = `${BASE_URL}/rest/delivery-bff/preferences/select`
-const FULL_URL = `${BASE_URL}/${PRODUCT_URL}`
+
 /*
   ÜRÜN URL:
 
@@ -14,6 +14,8 @@ const FULL_URL = `${BASE_URL}/${PRODUCT_URL}`
   Buradaki "turk-somonu-butun-kg-p-121c589" kısmını değiştirin.
 */
 const PRODUCT_URL = "turk-somonu-butun-kg-p-121c589"
+
+const FULL_URL = `${BASE_URL}/${PRODUCT_URL}`
 
 const fetchData = async (page, url) => {
   try {
@@ -125,7 +127,6 @@ const checkStock = async (page, stores, reid) => {
       console.error("Response Error:", err.message)
     }
   })
-
   for (const store of stores) await changeStore(page, store, reid)
 }
 
@@ -145,7 +146,7 @@ const checkProductsInStores = async (cityName, townName) => {
 
 // Kullanım
 // await checkProductsInStores("Şehir İsmi", "İlçe")
-// await checkProductsInStores("Şehir Plaka Kodu", "İlçe")
+// await checkProductsInStores(Şehir Plaka Kodu, "İlçe")
 // await checkProductsInStores("Şehir İsmi")
-// await checkProductsInStores("Şehir Plaka Kodu")
-await checkProductsInStores("Antalya","Konyaaltı")
+// await checkProductsInStores(Şehir Plaka Kodu)
+await checkProductsInStores("Ankara","Çankaya")
