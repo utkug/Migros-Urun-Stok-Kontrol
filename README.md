@@ -17,6 +17,9 @@ await checkProductsInStores("Ankara","Çankaya")
 await checkProductsInStores(6,"Çankaya")
 await checkProductsInStores("Ankara")
 await checkProductsInStores(6)
+
+# Çalıştırmak için
+node migrosStockChecker.js
 ```
 ### Ürün URL'si
 
